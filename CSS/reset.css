@@ -23,7 +23,8 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Helvetica Neue",Arial, Helvetica, sans-serif;
-	font-size: 16px;
+	/* font-size: 16px; */
+	
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

@@ -6,8 +6,10 @@ nav {
 body {
     background-color: #eaeaea;
     box-sizing: border-box;
+    text-size-adjust: 100%;
     /* text-align: center; */
 }
+
 
 section {
     width: 100%;
@@ -126,6 +128,7 @@ img {
     width: 0.8rem;
     margin-right: 5px;
 }
+
 .nav-ul {
     display: flex;
     justify-content: center;
@@ -152,7 +155,7 @@ img {
 .playbtnsize01 {
     width: 2rem;
     margin-right: 15px;
-   
+
 }
 
 .recordbox {
@@ -204,7 +207,7 @@ img {
 }
 
 .playsubtitle {
-    font-size: 60%;
+    font-size: 5px;
     color: #8d8d8d;
 }
 
@@ -448,6 +451,7 @@ img {
 #RADIO {
     margin-top: 6rem;
     overflow: hidden;
+    padding-top: 0;
 }
 
 .radiocontent {
@@ -498,6 +502,8 @@ img {
     padding-left: 12rem;
 }
 
+
+
 .contenttitle {
 
     font-size: 1.3rem;
@@ -506,7 +512,10 @@ img {
 }
 
 .contentp {
-
+    white-space: normal;
+    text-overflow: initial;
+    overflow: visible;
+    width: 100%;
     font-size: 0.9rem;
     line-height: 1.5;
 }
@@ -515,12 +524,18 @@ img {
     color: #fff;
 }
 
+.gry {
+    color: #ffffff;
+}
+
 .first-airbox img {
     width: 100%;
 }
 
 .airbox {
     bottom: 3rem;
+    border-radius: 2rem;
+    overflow: hidden;
 }
 
 .airbox img {
@@ -564,6 +579,7 @@ img {
 
 #INFO {
     margin-top: 6rem;
+    overflow: hidden;
 }
 
 .infocontent {
@@ -572,7 +588,6 @@ img {
     padding-bottom: 5rem;
     border-bottom: 1px solid #fff;
     width: 80%;
-    min-width: 974px;
 }
 
 .infosz {
@@ -661,6 +676,7 @@ img {
     0% {
         transform: scale(0);
     }
+
     100% {
         transform: scale(1);
     }
@@ -681,7 +697,7 @@ img {
 .contentbox {
     background-image: url(../img/pickup_bg.jpg);
     background-position-y: 30%;
-    background-size: 300% ;
+    background-size: 300%;
     height: 12.5vh;
     background-repeat: no-repeat;
     display: flex;
@@ -692,14 +708,17 @@ img {
 }
 
 .cbox-bg01 {
-    background-position-x:10% ;
+    background-position-x: 10%;
 }
+
 .cbox-bg02 {
-    background-position-x:30% ;
+    background-position-x: 30%;
 }
+
 .cbox-bg03 {
-    background-position-x:80% ;
+    background-position-x: 80%;
 }
+
 .contentbox ::before {
     background-image: url(../img/noise.png);
     background-repeat: repeat;
@@ -715,11 +734,11 @@ img {
 
 .contentimg {
     width: 100px;
-    
+
 }
 
 .contentli {
-   
+
     width: 100%;
     margin-right: 2%;
     /* max-width: 26%; */
@@ -745,26 +764,27 @@ img {
 
 .footercontain {
     width: 100%;
-    padding: 4rem 0 ;
+    padding: 4rem 0;
     /* flex-shrink: 0; */
     margin: 0 auto;
 
 }
 
-.fb-h:hover{
+.fb-h:hover {
     color: #007aff;
 }
 
-.tw-h:hover{
+.tw-h:hover {
     color: #1d9bf0;
 }
 
-.ln-h:hover{
+.ln-h:hover {
     color: #00b900;
 }
 
 .brline-r {
     border-right: 1px solid #8d8d8d54;
+    flex-basis: auto;
 }
 
 .brline-l {
@@ -775,13 +795,13 @@ img {
     padding: 0.6rem 30%;
     border: none;
     border-radius: 20px;
-    margin-top:2rem ;
+    margin-top: 2rem;
 }
 
 .ptext::before {
     display: block;
     content: attr(data-text);
-    color:#fff;
+    color: #fff;
 }
 
 .footertitle {
@@ -802,11 +822,11 @@ img {
     right: 0;
     left: 95.5%;
     z-index: 10;
-    transform: translate3d(5%,-20%,0);
+    transform: translate3d(5%, -20%, 0);
 }
 
 .animt-circle img {
-    animation:rotate 10000ms linear infinite ;
+    animation: rotate 10000ms linear infinite;
 }
 
 .animt-circle::before {
@@ -822,10 +842,35 @@ img {
     background-position: center right;
     /* margin: ; */
     z-index: 10;
-    width:100%;
-    height:0;
-    padding-top:100%;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
 
+}
+
+@keyframes comeup {
+    0% {
+        opacity: 0;
+        bottom: 6rem;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 8rem;
+    }
+}
+
+@keyframes godown {
+
+    0% {
+        opacity: 1;
+        bottom: 8rem;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: 6rem;
+    }
 }
 
 /*___________________RWD___________*/
@@ -846,8 +891,10 @@ img {
     }
 
     .navmargin {
-        width: 100%;
+        width: 100vw;
+        z-index: 99;
     }
+
     .logo-t {
         position: fixed;
         top: 0;
@@ -856,7 +903,8 @@ img {
         width: 100%;
         padding-top: 10%;
     }
-    .logo-fix a{
+
+    .logo-fix a {
         font-size: 3vw;
         font-weight: 700;
     }
@@ -866,10 +914,11 @@ img {
         position: fixed;
         bottom: 0;
         width: 100%;
-        border-top:1px solid #d3d3d3 ;
+        border-top: 1px solid #d3d3d3;
     }
+
     .linkflex {
-        display:block;
+        display: block;
         justify-content: center;
         cursor: pointer;
         margin-right: 20px;
@@ -885,12 +934,12 @@ img {
         padding-bottom: 10px;
         margin: 0 auto;
     }
-    
+
 
     .nav-ul {
         justify-content: space-between;
         padding: 10px 20px;
-        
+
     }
 
     .nav-li {
@@ -900,45 +949,49 @@ img {
 
     .playbar {
         width: 90%;
-        border-radius: 1.5rem;
-        height: 9rem;
+        border-radius: 15px;
+        height: 13rem;
         padding: 0 10px;
-        min-width: 90%;
         position: fixed;
-        bottom: 8rem;
-        left: 2rem;
+        bottom: 12rem;
+        left: 2vw;
+
     }
-    
+
     .playbtnsize01 {
-        width: 5.5rem;
+        width: 9rem;
         margin: 0 2rem 0 1.2rem;
     }
+
     .playbtnsize01::before {
         width: 15%;
-        padding-top: 15%; 
+        padding-top: 15%;
     }
 
     .playinfo {
-        width: 60%;
-        height: 6rem;
-        
+        width: 33.5rem;
+        height: 9rem;
+        /* padding-left: 10rem; */
+
     }
+
     .playtitle {
-        font-size: 1.7rem;
-        line-height: 3.5rem;
-        padding-bottom: 0;
+        font-size: 3rem;
+        line-height: 2rem;
         font-weight: 700;
-        letter-spacing: -1px;
+        letter-spacing: 0px;
+        padding-top: 10px;
     }
+
     .playsubtitle {
-        font-size: 1.3rem;
-        font-weight: 700;
+        font-size: 2.5rem;
+        font-weight: 500;
         letter-spacing: -2px;
     }
 
     .playbtn {
-        width: 14rem;
-        padding-right: 2rem;
+        width: 20rem;
+        padding-right: 0rem;
     }
 
     .playbtnsize {
@@ -948,16 +1001,16 @@ img {
 
     .btnplay {
         width: 120%;
-        padding: 0 30px;
+        padding: 0 10px;
     }
 
     .barcomeup {
-        animation: comeup 0.5s linear ;
+        animation: comeup 0.5s linear;
         opacity: 1;
     }
 
     .bargodown {
-        animation: godown 0.5s linear ;
+        animation: godown 0.5s linear;
         opacity: 0;
     }
 
@@ -966,9 +1019,10 @@ img {
             opacity: 0;
             bottom: 6rem;
         }
+
         100% {
             opacity: 1;
-           bottom: 8rem;
+            bottom: 12rem;
         }
     }
 
@@ -976,13 +1030,327 @@ img {
 
         0% {
             opacity: 1;
-            bottom: 8rem;
+            bottom: 12rem;
         }
+
         100% {
             opacity: 0;
             bottom: 6rem;
         }
     }
-  
-    
+
+    /*______________________banner__________________________*/
+    #banner {
+        padding-top: 60%;
+    }
+
+    .cd-title {
+        /* transform: translate3d(0,0,50%); */
+        /* z-index: 2; */
+        width: 400px;
+        min-width: 166px;
+        position: absolute;
+        text-align: left;
+        bottom: 15%;
+    }
+
+    .p-smalltag {
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 600;
+        background-color: #eaeaea;
+        border-radius: 5px;
+        max-width: 20rem;
+        padding: 1.3rem .8rem;
+        margin-bottom: 10px;
+    }
+
+    .p-tag {
+        /* padding: 1rem 0.5rem; */
+        border-radius: 1rem;
+        margin-left: 1rem;
+
+
+    }
+
+    .ptag1 {
+        font-size: 8rem;
+        margin-bottom: 10px;
+        padding: 1rem 0 1.3rem 0;
+        max-width: 43rem;
+    }
+
+    .ptag2 {
+        font-size: 3rem;
+        text-align: left;
+        padding-right: 1rem;
+        padding-top: 10px 0;
+        display: block;
+        max-width: 30rem;
+    }
+
+    /*____________________CD play___________________*/
+
+    .loop-player-list {
+        padding-top: 30%;
+        left: 0;
+        float: left;
+        z-index: -1;
+        min-width: 1000px;
+    }
+
+    .cd-relate {
+        width: 100%;
+    }
+
+    .first-cd {
+        width: 70rem;
+        height: 70rem;
+        right: 30rem;
+    }
+
+    .ready-diskmove {
+        transform: translate3d(20%, 0%, 0);
+        z-index: -1;
+    }
+
+    .ready-diskmove01 {
+        left: 20%;
+        top: 38%;
+    }
+
+    .ready-play {
+        width: 30rem;
+        height: 30rem;
+        right: 60rem;
+        top: 10rem;
+        z-index: -3;
+    }
+
+    .cd-play {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*__________________ARTIST__________________________*/
+
+    #ARTIST {
+        padding-top: 5rem;
+        margin-top: 10rem;
+    }
+
+    .h2-title {
+        font-size: calc(1vw + 1vh + 0.5vmin);
+        padding-bottom: 0.5rem;
+    }
+
+    .h2-title01 {
+        /* font-size: 2.8rem; */
+        font-size: 6vw;
+        font-weight: 900;
+        position: relative;
+    }
+
+    .pinkcircle {
+        padding-bottom: 50px;
+        padding-left: 10px;
+    }
+
+    .pinkcircle::before {
+        font-weight: 500;
+    }
+
+    .artflex {
+        width: 350%;
+        min-width: 1800px;
+    }
+
+    .pinkcircle::before {
+
+        width: 5rem;
+        height: 4.2rem;
+        padding-top: 0.8rem;
+
+    }
+
+    /*________________RADIO______________________*/
+
+    #RADIO {
+        padding-top: 13rem;
+    }
+
+    .radiocontent {
+        display: block;
+        justify-content: center;
+        margin-bottom: 15rem;
+    }
+
+    .radiocontent::before {
+        left: 5rem;
+        width: 90vw;
+        height: 45vh;
+        border-radius: 3rem;
+    }
+
+    .contentsz {
+        min-width: 90rem;
+        padding-top: 9rem;
+        padding-right: 0;
+        padding-left: 5rem;
+        flex-shrink: 0;
+    }
+
+    .contentsz-li {
+        position: absolute;
+        top: 62rem;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .contenttitle {
+
+        font-size: 3rem;
+    }
+
+    .contentp {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 90vw;
+        font-size: 0.9rem;
+    }
+
+    .gry {
+        color: #969696;
+    }
+
+    .wht {
+        color: rgb(0, 0, 0);
+    }
+
+    .radio-li {
+        width: 47rem;
+    }
+
+    .radio-online {
+        width: 47rem;
+    }
+
+    .sz-18 {
+        position: relative;
+        right: 34rem;
+    }
+
+    /*_________________________INFO_________________________________*/
+
+    #INFO {
+        margin-bottom: 0;
+        overflow: auto;
+    }
+
+    .box94ml {
+        border-top: 1px solid #b9b9b9;
+        margin: 0 10%;
+        padding-top: 5rem;
+    }
+
+    .infocontent {
+        width: 90%;
+    }
+
+    .infoul {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .infosz {
+        max-width: 30rem;
+        width: 30rem;
+        min-width: 23rem;
+        padding-right: 1rem;
+    }
+
+    .infobox {
+        text-align: left;
+    }
+
+    .infobox img {
+        margin-bottom: 1rem;
+        border: 1px none;
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+
+    .txthide {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #8d8d8d;
+    }
+
+
+
+    .btn {
+        animation: opacity1 1.5s, smallbig 0.5s ease-in-out initial;
+        position: absolute;
+        transform: translatez(100px);
+        width: 100%;
+        height: 100%;
+        top: 5%;
+        left: 5%;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+
+    }
+
+    .btn:hover::before {
+        position: absolute;
+        content: '';
+        /* display: inline-block; */
+        background-image: url(../img/record_circle.png);
+        top: 4rem;
+        right: 1rem;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        width: 30%;
+        margin: 0 auto;
+        background-size: contain;
+    }
+
+    .btn:hover::after {
+        position: absolute;
+        content: '';
+        background-image: url(../img/play.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 5.3rem;
+        right: 0.8rem;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 8%;
+    }
+
+    @keyframes opacity1 {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes smallbig {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
 }
