@@ -215,6 +215,204 @@ img {
     transform: scale(-1, 1);
 }
 
+@keyframes comeup {
+    0% {
+        opacity: 0;
+        bottom: 6rem;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 8rem;
+    }
+}
+
+@keyframes godown {
+
+    0% {
+        opacity: 1;
+        bottom: 8rem;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: 6rem;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: calc(100vw / 75);
+    }
+
+    body {
+        min-width: 375px;
+        margin: 0;
+    }
+
+    .box94ml {
+        border-top: 1px solid #b9b9b9;
+        margin: 0 10%;
+        padding-top: 10rem;
+    }
+
+    .navfix {
+        height: 40vh;
+        background-image: linear-gradient(180deg, #e4e4e4 10%, rgba(0, 0, 0, 0));
+    }
+
+    .navmargin {
+        width: 100vw;
+        z-index: 99;
+    }
+
+    .logo-t {
+        position: fixed;
+        top: 0;
+        text-align: center;
+        height: 30vh;
+        width: 100%;
+        padding-top: 10%;
+    }
+
+    .logo-fix a {
+        font-size: 3vw;
+        font-weight: 700;
+    }
+
+    .nav-btn {
+        background-color: #eaeaea;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #d3d3d3;
+    }
+
+    .linkflex {
+        display: block;
+        justify-content: center;
+        cursor: pointer;
+        margin-right: 20px;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .imgsize {
+        width: 2.5rem;
+        margin-right: 5px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+    }
+
+
+    .nav-ul {
+        justify-content: space-between;
+        padding: 10px 20px;
+
+    }
+
+    .nav-li {
+        width: 20%;
+        padding: 10px;
+    }
+
+    
+
+    .playbtnsize01 {
+        width: 9rem;
+        margin: 0 2rem 0 1.2rem;
+    }
+
+    .playbtnsize01::before {
+        width: 15%;
+        padding-top: 15%;
+    }
+
+    .playinfo {
+        width: 33.5rem;
+        height: 9rem;
+        /* padding-left: 10rem; */
+
+    }
+
+    .playtitle {
+        font-size: 3rem;
+        line-height: 2rem;
+        font-weight: 700;
+        letter-spacing: 0px;
+        padding-top: 10px;
+    }
+
+    .playsubtitle {
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: -2px;
+    }
+
+    .playbtn {
+        width: 20rem;
+        padding-right: 0rem;
+    }
+
+    .playbtnsize {
+        width: 95%;
+
+    }
+
+    .btnplay {
+        width: 120%;
+        padding: 0 10px;
+    }
+
+    .playbar {
+        width: 90%;
+        border-radius: 15px;
+        height: 13rem;
+        padding: 0 10px;
+        position: fixed;
+        bottom: -102rem;
+        left: 2vw;
+
+    }
+
+    .barcomeup {
+        animation: comeup 0.5s linear;
+        opacity: 1;
+    }
+
+    .bargodown {
+        animation: godown 0.5s linear;
+        opacity: 0;
+    }
+
+    @keyframes comeup {
+        0% {
+            opacity: 0;
+            bottom: -106rem;
+        }
+
+        100% {
+            opacity: 1;
+            bottom: -102rem;
+        }
+    }
+
+    @keyframes godown {
+
+        0% {
+            opacity: 1;
+            bottom: -102rem;
+        }
+
+        100% {
+            opacity: 0;
+            bottom: -106rem;
+        }
+    }
+}
 /*___________________Banner_______________________*/
 
 #banner {
@@ -343,6 +541,100 @@ img {
     margin-bottom: 20px;
 }
 
+
+@media screen and (max-width:768px) {
+    #banner {
+        padding-top: 60%;
+    }
+
+    .cd-title {
+        /* transform: translate3d(0,0,50%); */
+        /* z-index: 2; */
+        width: 400px;
+        min-width: 166px;
+        position: absolute;
+        text-align: left;
+        bottom: 15%;
+    }
+
+    .p-smalltag {
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 600;
+        background-color: #eaeaea;
+        border-radius: 5px;
+        max-width: 20rem;
+        padding: 1.3rem .8rem;
+        margin-bottom: 10px;
+    }
+
+    .p-tag {
+        /* padding: 1rem 0.5rem; */
+        border-radius: 1rem;
+        margin-left: 1rem;
+
+
+    }
+
+    .ptag1 {
+        font-size: 8rem;
+        margin-bottom: 10px;
+        padding: 1rem 0 1.3rem 0;
+        max-width: 43rem;
+    }
+
+    .ptag2 {
+        font-size: 3rem;
+        text-align: left;
+        padding-right: 1rem;
+        padding-top: 10px 0;
+        display: block;
+        max-width: 30rem;
+    }
+
+    /*____________________CD play___________________*/
+
+    .loop-player-list {
+        padding-top: 30%;
+        left: 0;
+        float: left;
+        z-index: -1;
+        min-width: 1000px;
+    }
+
+    .cd-relate {
+        width: 100%;
+    }
+
+    .first-cd {
+        width: 70rem;
+        height: 70rem;
+        right: 30rem;
+    }
+
+    .ready-diskmove {
+        transform: translate3d(20%, 0%, 0);
+        z-index: -1;
+    }
+
+    .ready-diskmove01 {
+        left: 20%;
+        top: 38%;
+    }
+
+    .ready-play {
+        width: 30rem;
+        height: 30rem;
+        right: 60rem;
+        top: 10rem;
+        z-index: -3;
+    }
+
+    .cd-play {
+        width: 100%;
+        height: 100%;
+    }
+}
 /*____________________________Artist___________________________*/
 
 #ARTIST {
@@ -445,6 +737,51 @@ img {
     ;
 }
 
+@media screen and (max-width:768px) {
+
+    #ARTIST {
+        padding-top: 5rem;
+        outline: 0 solid #000;
+    }
+
+    .brw {
+        border-top: 1px solid #ffffff;
+    }
+    .h2-title {
+        font-size: calc(1vw + 1vh + 0.5vmin);
+        padding-bottom: 0.5rem;
+    }
+
+    .h2-title01 {
+        /* font-size: 2.8rem; */
+        font-size: 6vw;
+        font-weight: 900;
+        position: relative;
+    }
+
+    .pinkcircle {
+        padding-bottom: 50px;
+        padding-left: 10px;
+    }
+
+    .pinkcircle::before {
+        font-weight: 500;
+    }
+
+    .artflex {
+        width: 350%;
+        min-width: 1800px;
+    }
+
+    .pinkcircle::before {
+
+        width: 5rem;
+        height: 4rem;
+        padding-top: 1.2rem;
+
+    }
+
+}
 
 /*__________________Radio_____________________________*/
 
@@ -575,6 +912,80 @@ img {
     flex-shrink: 0;
 }
 
+@media screen and (max-width:768px) {
+    #RADIO {
+        padding-top: 2rem;
+        margin-top: 0;
+    }
+
+    .radiocontent {
+        display: block;
+        justify-content: center;
+        margin-bottom: 15rem;
+    }
+
+    .radiocontent::before {
+        left: 5rem;
+        width: 90vw;
+        height: 45vh;
+        border-radius: 3rem;
+    }
+
+    .contentsz {
+        min-width: 90rem;
+        padding-top: 9rem;
+        padding-right: 0;
+        padding-left: 5rem;
+        flex-shrink: 0;
+    }
+
+    .contentsz-li {
+        position: absolute;
+        top: 62rem;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .contenttitle {
+
+        font-size: 3rem;
+    }
+
+    .contentp {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 0.9rem;
+    }
+
+    .w-90 {
+        width: 90vw;
+    }
+
+    .gry {
+        color: #969696;
+    }
+
+    .wht {
+        color: rgb(0, 0, 0);
+    }
+
+    .radio-li {
+        width: 47rem;
+    }
+
+    .radio-online {
+        width: 47rem;
+    }
+
+    .sz-18 {
+        position: relative;
+        right: 34rem;
+    }
+
+}
+
+
 /*________________INFO__________________________*/
 
 #INFO {
@@ -598,6 +1009,7 @@ img {
 
 .infobox {
     text-align: left;
+    margin-right: 1rem;
 }
 
 .infobox img {
@@ -682,6 +1094,76 @@ img {
     }
 }
 
+@media screen and (max-width:768px) {
+    #INFO {
+        margin-bottom: 0;
+        overflow: auto;
+    }
+
+    
+
+    .infocontent {
+        width: 100%;
+        border: 0 solid #000;
+    }
+
+    .infoul {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .infosz {
+        max-width: 29rem;
+        width: 30rem;
+        min-width: 23rem;
+        padding-right: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .infobox {
+        text-align: left;
+    }
+
+    .infobox img {
+        margin-bottom: 1rem;
+        border: 1px none;
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+
+    .txthide {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #8d8d8d;
+    }
+
+    .imgbox {
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    @keyframes opacity1 {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes smallbig {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+}
 /*_______________CONTENTS_______________*/
 
 /* #CONTENTS {
@@ -749,6 +1231,30 @@ img {
     margin-top: 10px;
 }
 
+@media screen and (max-width:768px) {
+
+    #CONTENTS {
+        overflow: hidden;
+    }
+
+    .backnormal {
+        margin: 0 -10% 0 10%;
+    }
+    .contentcontainer {
+        min-width: 100rem;
+    }
+
+    .contentimg {
+        width: 15rem;
+    }
+
+    .contentbox {
+        height: 22rem;
+        border-radius: 2rem;
+    }
+
+}
+
 /*_____________Footer_______________*/
 
 #footer {
@@ -782,13 +1288,17 @@ img {
     color: #00b900;
 }
 
-.brline-r {
-    border-right: 1px solid #8d8d8d54;
+.brline {
+    
     flex-basis: auto;
 }
 
-.brline-l {
-    border-left: 1px solid #8d8d8d54;
+.br-r {
+    border-right: 1px solid #8d8d8d54;
+}
+
+.br-l {
+    border-left: 1px solid #8d8d8d54; 
 }
 
 .btnstyle {
@@ -848,509 +1358,91 @@ img {
 
 }
 
-@keyframes comeup {
-    0% {
-        opacity: 0;
-        bottom: 6rem;
-    }
 
-    100% {
-        opacity: 1;
-        bottom: 8rem;
-    }
-}
-
-@keyframes godown {
-
-    0% {
-        opacity: 1;
-        bottom: 8rem;
-    }
-
-    100% {
-        opacity: 0;
-        bottom: 6rem;
-    }
-}
-
-/*___________________RWD___________*/
 
 @media screen and (max-width:768px) {
-    html {
-        font-size: calc(100vw / 75);
+    #footer {
+        margin-bottom: 30rem;
     }
-
-    body {
-        min-width: 390px;
-        margin: 0;
-    }
-
-    .navfix {
-        height: 40vh;
-        background-image: linear-gradient(180deg, #e4e4e4 10%, rgba(0, 0, 0, 0));
-    }
-
-    .navmargin {
-        width: 100vw;
-        z-index: 99;
-    }
-
-    .logo-t {
-        position: fixed;
-        top: 0;
-        text-align: center;
-        height: 30vh;
-        width: 100%;
-        padding-top: 10%;
-    }
-
-    .logo-fix a {
-        font-size: 3vw;
-        font-weight: 700;
-    }
-
-    .nav-btn {
-        background-color: #eaeaea;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        border-top: 1px solid #d3d3d3;
-    }
-
-    .linkflex {
+    .footer-ul {
         display: block;
-        justify-content: center;
-        cursor: pointer;
-        margin-right: 20px;
+    }
+    .footerli {
         width: 100%;
-        margin: 0 auto;
-        font-size: 1.2rem;
-        font-weight: 700;
     }
 
-    .imgsize {
-        width: 2.5rem;
-        margin-right: 5px;
-        padding-bottom: 10px;
-        margin: 0 auto;
+    .foootercontain {
+        padding: 0;
     }
-
-
-    .nav-ul {
+    .brline {
+        display: flex;
         justify-content: space-between;
-        padding: 10px 20px;
-
+        margin: 0 7rem;
+        padding-bottom: 3.5rem;
+        border-bottom: 1px solid #8d8d8d34;
+        border-right: 0;
     }
 
-    .nav-li {
-        width: 20%;
-        padding: 10px;
+    .br-r {
+        border-right: 0;
+    }
+    
+    .br-l {
+        border-left: 0 solid #000;
     }
 
-    .playbar {
-        width: 90%;
-        border-radius: 15px;
-        height: 13rem;
-        padding: 0 10px;
-        position: fixed;
-        bottom: 12rem;
-        left: 2vw;
-
+    .foot-title {
+        text-align: left;
     }
 
-    .playbtnsize01 {
-        width: 9rem;
-        margin: 0 2rem 0 1.2rem;
-    }
-
-    .playbtnsize01::before {
-        width: 15%;
-        padding-top: 15%;
-    }
-
-    .playinfo {
-        width: 33.5rem;
-        height: 9rem;
-        /* padding-left: 10rem; */
-
-    }
-
-    .playtitle {
-        font-size: 3rem;
-        line-height: 2rem;
+    .btnstyle {
+        padding: 0rem 4.5rem;
+        border-radius: 5rem;
+        font-size: 1rem;
         font-weight: 700;
-        letter-spacing: 0px;
-        padding-top: 10px;
+        margin-top: 0;
     }
 
-    .playsubtitle {
-        font-size: 2.5rem;
-        font-weight: 500;
-        letter-spacing: -2px;
-    }
-
-    .playbtn {
-        width: 20rem;
-        padding-right: 0rem;
-    }
-
-    .playbtnsize {
-        width: 95%;
-
-    }
-
-    .btnplay {
-        width: 120%;
-        padding: 0 10px;
-    }
-
-    .barcomeup {
-        animation: comeup 0.5s linear;
-        opacity: 1;
-    }
-
-    .bargodown {
-        animation: godown 0.5s linear;
-        opacity: 0;
-    }
-
-    @keyframes comeup {
-        0% {
-            opacity: 0;
-            bottom: 6rem;
-        }
-
-        100% {
-            opacity: 1;
-            bottom: 12rem;
-        }
-    }
-
-    @keyframes godown {
-
-        0% {
-            opacity: 1;
-            bottom: 12rem;
-        }
-
-        100% {
-            opacity: 0;
-            bottom: 6rem;
-        }
-    }
-
-    /*______________________banner__________________________*/
-    #banner {
-        padding-top: 60%;
-    }
-
-    .cd-title {
-        /* transform: translate3d(0,0,50%); */
-        /* z-index: 2; */
-        width: 400px;
-        min-width: 166px;
-        position: absolute;
-        text-align: left;
-        bottom: 15%;
-    }
-
-    .p-smalltag {
-        text-align: center;
-        font-size: 1.7rem;
-        font-weight: 600;
-        background-color: #eaeaea;
-        border-radius: 5px;
-        max-width: 20rem;
-        padding: 1.3rem .8rem;
-        margin-bottom: 10px;
-    }
-
-    .p-tag {
-        /* padding: 1rem 0.5rem; */
-        border-radius: 1rem;
-        margin-left: 1rem;
-
-
-    }
-
-    .ptag1 {
-        font-size: 8rem;
-        margin-bottom: 10px;
-        padding: 1rem 0 1.3rem 0;
-        max-width: 43rem;
-    }
-
-    .ptag2 {
-        font-size: 3rem;
-        text-align: left;
-        padding-right: 1rem;
-        padding-top: 10px 0;
-        display: block;
-        max-width: 30rem;
-    }
-
-    /*____________________CD play___________________*/
-
-    .loop-player-list {
-        padding-top: 30%;
-        left: 0;
-        float: left;
-        z-index: -1;
-        min-width: 1000px;
-    }
-
-    .cd-relate {
-        width: 100%;
-    }
-
-    .first-cd {
-        width: 70rem;
-        height: 70rem;
-        right: 30rem;
-    }
-
-    .ready-diskmove {
-        transform: translate3d(20%, 0%, 0);
-        z-index: -1;
-    }
-
-    .ready-diskmove01 {
-        left: 20%;
-        top: 38%;
-    }
-
-    .ready-play {
-        width: 30rem;
-        height: 30rem;
-        right: 60rem;
-        top: 10rem;
-        z-index: -3;
-    }
-
-    .cd-play {
-        width: 100%;
-        height: 100%;
-    }
-
-    /*__________________ARTIST__________________________*/
-
-    #ARTIST {
-        padding-top: 5rem;
-        margin-top: 10rem;
+    .footertitle {
+        font-style: 2.8rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+        letter-spacing: 0.2rem;
     }
 
     .h2-title {
-        font-size: calc(1vw + 1vh + 0.5vmin);
-        padding-bottom: 0.5rem;
-    }
-
-    .h2-title01 {
-        /* font-size: 2.8rem; */
-        font-size: 6vw;
-        font-weight: 900;
-        position: relative;
-    }
-
-    .pinkcircle {
-        padding-bottom: 50px;
-        padding-left: 10px;
-    }
-
-    .pinkcircle::before {
         font-weight: 500;
     }
 
-    .artflex {
-        width: 350%;
-        min-width: 1800px;
-    }
-
-    .pinkcircle::before {
-
-        width: 5rem;
-        height: 4.2rem;
-        padding-top: 0.8rem;
-
-    }
-
-    /*________________RADIO______________________*/
-
-    #RADIO {
-        padding-top: 13rem;
-    }
-
-    .radiocontent {
-        display: block;
-        justify-content: center;
-        margin-bottom: 15rem;
-    }
-
-    .radiocontent::before {
-        left: 5rem;
-        width: 90vw;
-        height: 45vh;
-        border-radius: 3rem;
-    }
-
-    .contentsz {
-        min-width: 90rem;
-        padding-top: 9rem;
-        padding-right: 0;
-        padding-left: 5rem;
-        flex-shrink: 0;
-    }
-
-    .contentsz-li {
-        position: absolute;
-        top: 62rem;
-        display: block;
-        flex-shrink: 0;
-    }
-
-    .contenttitle {
-
-        font-size: 3rem;
-    }
-
-    .contentp {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        width: 90vw;
-        font-size: 0.9rem;
-    }
-
-    .gry {
-        color: #969696;
-    }
-
-    .wht {
-        color: rgb(0, 0, 0);
-    }
-
-    .radio-li {
-        width: 47rem;
-    }
-
-    .radio-online {
-        width: 47rem;
-    }
-
-    .sz-18 {
-        position: relative;
-        right: 34rem;
-    }
-
-    /*_________________________INFO_________________________________*/
-
-    #INFO {
-        margin-bottom: 0;
-        overflow: auto;
-    }
-
-    .box94ml {
-        border-top: 1px solid #b9b9b9;
-        margin: 0 10%;
-        padding-top: 5rem;
-    }
-
-    .infocontent {
-        width: 90%;
-    }
-
-    .infoul {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .infosz {
-        max-width: 30rem;
-        width: 30rem;
-        min-width: 23rem;
-        padding-right: 1rem;
-    }
-
-    .infobox {
-        text-align: left;
-    }
-
-    .infobox img {
-        margin-bottom: 1rem;
-        border: 1px none;
+    .footerbox {
         border-radius: 2rem;
-        overflow: hidden;
     }
 
-    .txthide {
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        color: #8d8d8d;
-    }
-
-
-
-    .btn {
-        animation: opacity1 1.5s, smallbig 0.5s ease-in-out initial;
+    .animt-circle {
         position: absolute;
-        transform: translatez(100px);
-        width: 100%;
-        height: 100%;
-        top: 5%;
-        left: 5%;
+        width: 16%;
+        top: 0;
+        bottom: 0;
         right: 0;
-        bottom: 0;
-        margin: 0 auto;
-
-    }
-
-    .btn:hover::before {
-        position: absolute;
-        content: '';
-        /* display: inline-block; */
-        background-image: url(../img/record_circle.png);
-        top: 4rem;
-        right: 1rem;
-        bottom: 0;
-        left: 0;
-        background-repeat: no-repeat;
-        width: 30%;
-        margin: 0 auto;
-        background-size: contain;
-    }
-
-    .btn:hover::after {
-        position: absolute;
-        content: '';
-        background-image: url(../img/play.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        top: 5.3rem;
-        right: 0.8rem;
-        bottom: 0;
-        left: 0;
-        margin: 0 auto;
-        width: 8%;
-    }
-
-    @keyframes opacity1 {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes smallbig {
-        0% {
-            transform: scale(0);
-        }
-
-        100% {
-            transform: scale(1);
-        }
+        left: 95.5%;
+        z-index: 1;
+        transform: translate3d(-2rem, -5rem, 0);
     }
 
 }
+/*___________________RWD___________*/
+
+
+
+    /*______________________banner__________________________*/
+   
+
+    /*__________________ARTIST__________________________*/
+
+    
+    /*________________RADIO______________________*/
+
+   
+    /*_________________________INFO_________________________________*/
+
+   
